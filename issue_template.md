@@ -1,36 +1,30 @@
 ---
-name: Bug report
-about: Report a bug encountered while using the Frappe Framework
-labels: bug
+عنوان المشكلة: Bug report
+تفاصيل كتعريف: Report a bug encountered while using the Frappe Framework
+تصنيف: bug
 ---
 
-<!--
-Welcome to the Frappe Framework issue tracker! Before creating an issue, please heed the following:
+## توصيف الاشكال
 
-1. This tracker should only be used to report bugs and request features / enhancements
-3. When making a bug report, make sure you provide all required information. The easier it is for
-   maintainers to reproduce, the faster it'll be fixed.
-4. If you think you know what the reason for the bug is, share it with us. Maybe put in a PR 😉
--->
+## توصيف المشكلة "معلومات"
 
-## Description of the issue
 
-## Context information (for bug reports)
+**بيئة العمل || مستخدم وكلمة السر **
 
-**Output of `bench version`**
+
 ```
 (paste here)
 ```
 
-## Steps to reproduce the issue
+## خطوات اظهار المشكلة 
 
 1.
 2.
 3.
 
-### Observed result
+### النتيجة من تنفيذ الخطوات 
 
-### Expected result
+### النتيجة المتوقعة الصحيحة
 
 ### Stacktrace / full error message
 
@@ -38,6 +32,6 @@ Welcome to the Frappe Framework issue tracker! Before creating an issue, please 
 (paste here)
 ```
 
-## Additional information
+## Additional information معلومات اضافية
 
 OS version / distribution, `Frappe` install method, etc.
