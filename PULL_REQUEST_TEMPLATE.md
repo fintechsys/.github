@@ -1,14 +1,24 @@
+<!--
 
-تعريف المنجز DOD
+Some key notes before you open a PR:
 
-1. انجاز المهام التفصيلية المدرجة في قيد العمل.
-2. تغطية الـ Unit Test للكود البرمجي.
-3. ترجمة كل النصوص والرسائل المنبثقة في النظام المرتبطة بالميزة المطلوبة.
-4. مرور الكود المرفوع بالامتثال والمعايير لجودة الكود
-5. إدراج توثيق الميزة المطلوبة في النظام بناء على التصميم (الوصول - تعريف عام - الخطوات او سير العمل - تفاصيل اضافة "شرح حقول")في الـ "pull Request".
-6. مراجعة الكود من قبل المختص ال Seniors.
-7. أعداد حالات الاختبار "Test Cases" أثناء التطوير بناء على السيناريو المطبق في النظام.
-8. اجتياز اختبار معايير القبول "Acceptances Test" بناء على المواصفات المطلوبة.
-9. اجتياز الاختبار الوظيفي "Functional Test Case" بناء على التصميم المتفق عليه.
-10. اجتياز خطة اختبار للمتطلبات الغير وظيفية إن وجد بناء على الحاجة. 
-11. اختبار السيناريو في في بيئة التطوير والتأكد من عمله في الخادم.
+ 1. Select which branch should this PR be merged in?
+ 2. PR name follows [convention](http://karma-runner.github.io/4.0/dev/git-commit-msg.html)
+ 3. All tests pass locally, UI and Unit tests
+ 4. All business logic and validations must be on the server-side
+ 5. Update necessary Documentation
+ 6. Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes
+
+-->
+
+> Please provide enough information so that others can review your pull request:
+
+<!-- You can skip this if you're fixing a typo or updating existing documentation -->
+
+> Explain the **details** for making this change. What existing problem does the pull request solve?
+
+<!-- Example: When "Adding a function to do X", explain why it is necessary to have a way to do X. -->
+
+> Screenshots/GIFs
+
+<!-- Add images/recordings to better visualize the change: expected/current behviour -->
