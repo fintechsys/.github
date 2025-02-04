@@ -1,0 +1,4 @@
+addReviewers: true
+reviewers:
+  - username1
+  - username2
