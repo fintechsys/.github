@@ -1,7 +1,10 @@
 ---
-عنوان المشكلة: Bug report
-تفاصيل كتعريف: Report a bug encountered while using the Frappe Framework
-تصنيف: bug
+name: Bug Report اشكال
+about: 'توصيف المشكلة لحل اسرع '
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ## توصيف الاشكال
