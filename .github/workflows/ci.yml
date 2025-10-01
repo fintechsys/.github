@@ -1,0 +1,42 @@
+name: CI Build and Deploy
+
+on:
+  workflow_call:
+    inputs:
+      runs_on:
+        description: 'Runner to execute the workflow'
+        required: true
+        type: string
+      image_name:
+        description: 'Docker image name with tag'
+        required: true
+        type: string
+      deploy_dir:
+        description: 'Deployment directory on server'
+        required: true
+        type: string
+
+jobs:
+  build-and-deploy:
+    runs-on: ${{ inputs.runs_on }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          echo "Building Docker image..."
+          docker build -t ${{ inputs.image_name }} .
+          echo "Docker image built successfully!"
+
+      - name: Deploy application
+        run: |
+          cd ${{ inputs.deploy_dir }}
+          
+          echo "Stopping existing containers..."
+          docker compose down
+                    
+          echo "Starting updated containers..."
+          docker compose up -d
+          
+          echo "Deployment completed successfully!"
