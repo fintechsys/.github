@@ -23,16 +23,11 @@ on:
         description: 'Branch to checkout for build'
         required: true
         type: string
+    secrets:
       HARBOR_USERNAME:
-        description: 'Harbor registry username'
         required: true
-        type: string
       HARBOR_PASSWORD:
-        description: 'Harbor registry password'
         required: true
-        type: string
-
-
 
 jobs:
   build-and-push:
@@ -50,8 +45,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: harbor.fintechsys.net
-          username: ${{ inputs.HARBOR_USERNAME }}
-          password: ${{ inputs.HARBOR_PASSWORD }}
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
           
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -70,8 +65,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: harbor.fintechsys.net
-          username: ${{ inputs.HARBOR_USERNAME }}
-          password: ${{ inputs.HARBOR_PASSWORD }}
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
 
       - name: Deploy to server
         run: |
