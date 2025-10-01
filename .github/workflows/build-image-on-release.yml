@@ -15,6 +15,12 @@ on:
         description: 'Release tag to use for the image'
         required: true
         type: string
+    secrets:
+      HARBOR_USERNAME:
+        required: true
+      HARBOR_PASSWORD:
+        required: true
+
 
 jobs:
   build-image:
