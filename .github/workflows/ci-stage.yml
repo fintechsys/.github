@@ -70,8 +70,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: harbor.fintechsys.net
-          username: ${{ secrets.HARBOR_USERNAME }}
-          password: ${{ secrets.HARBOR_PASSWORD }}
+          username: ${{ inputs.harbor_username }}
+          password: ${{ inputs.harbor_password }}
 
       - name: Deploy to server
         run: |
