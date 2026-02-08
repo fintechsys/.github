@@ -26,7 +26,7 @@ jobs:
       - name: Build Docker image
         run: |
           echo "Building Docker image..."
-          docker build -t ${{ inputs.image_name }} .
+          docker build -t --network=host  ${{ inputs.image_name }} .
           echo "Docker image built successfully!"
 
       - name: Deploy application
