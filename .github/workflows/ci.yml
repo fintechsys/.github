@@ -26,11 +26,13 @@ jobs:
       - name: Build Docker image
         run: |
           echo "Building Docker image..."
-          docker build \
-            --network=host \
-            --add-host pypi.org:151.101.128.223 \
-            --add-host files.pythonhosted.org:151.101.128.63 \
-            -t ${{ inputs.image_name }} .
+          echo "Building Docker image with Legacy Builder..."
+          # Disable BuildKit to force use of the host's full network stack
+          export DOCKER_BUILDKIT=0
+          export COMPOSE_DOCKER_CLI_BUILD=0
+          
+          docker build --network=host -t ${{ inputs.image_name }} .
+          echo "Docker image built successfully!"
             
           echo "Docker image built successfully!"
 
